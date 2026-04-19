@@ -5,7 +5,7 @@ import { SafeAreaView, StyleSheet, Switch, Text, TouchableOpacity, View } from '
 
 export default function PrivacySettingsScreen() {
   const router = useRouter();
-  const [isPrivate, setIsPrivate] = useState(true); // 預設開啟
+  const [isPrivate, setIsPrivate] = useState(true); 
 
   return (
     <SafeAreaView style={styles.container}>
@@ -22,12 +22,12 @@ export default function PrivacySettingsScreen() {
       <View style={styles.row}>
         <Text style={styles.label}>不公開帳號</Text>
         <Switch
-          trackColor={{ false: "#767577", true: "#2D3452" }} // 開啟時的深藍色
+          trackColor={{ false: "#767577", true: "#2D3452" }} 
           thumbColor={isPrivate ? "#FFF" : "#f4f3f4"}
           ios_backgroundColor="#3e3e3e"
           onValueChange={setIsPrivate}
           value={isPrivate}
-          style={{ transform: [{ scaleX: 1.2 }, { scaleY: 1.2 }] }} // 稍微放大開關
+          style={{ transform: [{ scaleX: 1.2 }, { scaleY: 1.2 }] }}
         />
       </View>
 
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 40,
-    marginTop: 60, // 距離頂部一些距離
+    marginTop: 60, 
   },
   label: { fontSize: 20, color: '#2D3452', fontWeight: '500' },
 });
