@@ -1,5 +1,5 @@
 import { FontAwesome } from '@expo/vector-icons';
-import AsyncStorage from '@react-native-async-storage/async-storage'; // ★ 引入 AsyncStorage
+import AsyncStorage from '@react-native-async-storage/async-storage'; 
 import { ResponseType, useAuthRequest } from 'expo-auth-session';
 import * as Facebook from 'expo-auth-session/providers/facebook';
 import * as Google from 'expo-auth-session/providers/google';
@@ -10,7 +10,6 @@ import { Alert, Image, Platform, ScrollView, StyleSheet, Text, TouchableOpacity,
 
 WebBrowser.maybeCompleteAuthSession();
 
-// LINE的設定檔
 const lineDiscovery = {
   authorizationEndpoint: 'https://access.line.me/oauth2/v2.1/authorize',
   tokenEndpoint: 'https://api.line.me/oauth2/v2.1/token',
@@ -23,7 +22,7 @@ export default function LoginScreen() {
   // Redirect URI
   const redirectUri = Platform.select({
     web: typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8081',
-    default: "https://auth.expo.io/@piggo1224/piggo" // 這裡之後如果換帳號發布，記得改回自己的 expo 帳號
+    default: "https://auth.expo.io/@piggo1224/piggo" 
   });
 
   // ==========================================
@@ -40,15 +39,12 @@ export default function LoginScreen() {
     if (googleResponse?.type === 'success') {
       const { authentication } = googleResponse;
       if (authentication?.accessToken) {
-        // ★ 登入成功拿到 Token 後，去跟 Google 要使用者資料
         fetchGoogleUserInfo(authentication.accessToken);
       }
     } else if (googleResponse?.type === 'error') {
       Alert.alert("Google 登入失敗", "請再試一次");
     }
   }, [googleResponse]);
-
-  // ★ 拿 Token 去換取使用者的基本資料，並存入記憶體
   const fetchGoogleUserInfo = async (token: string) => {
     try {
       const res = await fetch('https://www.googleapis.com/userinfo/v2/me', {
@@ -56,8 +52,6 @@ export default function LoginScreen() {
       });
       const user = await res.json();
       console.log('Google 使用者資料:', user);
-
-      // 把抓到的名字和頭貼存進 AsyncStorage，讓 Profile 頁面可以讀取！
       await AsyncStorage.setItem('user-name', user.name);
       if (user.picture) {
         await AsyncStorage.setItem('user-avatar', user.picture);
@@ -141,12 +135,10 @@ export default function LoginScreen() {
         >
           <FontAwesome name="facebook-f" size={32} color="#fff" />
         </TouchableOpacity>
-
-        {/* ★ Google 登入按鈕 */}
         <TouchableOpacity 
             style={[styles.socialButton, { backgroundColor: '#fff' }]} 
             activeOpacity={0.6}
-            disabled={!googleRequest} // 確保請求準備好才能按
+            disabled={!googleRequest} 
             onPress={() => googlePromptAsync()}
         >
           <FontAwesome name="google" size={32} color="#EA4335" />
