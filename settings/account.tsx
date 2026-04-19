@@ -12,13 +12,11 @@ export default function AccountSettingsScreen() {
   const [name, setName] = useState('Piggy'); // 預設名字
   const [avatarUri, setAvatarUri] = useState<string | null>(null);
 
-  // 一進來先去記憶體找找看有沒有已經設定過的頭貼和名字
   useEffect(() => {
     const loadData = async () => {
       const savedAvatar = await AsyncStorage.getItem('user-avatar');
       if (savedAvatar) setAvatarUri(savedAvatar);
 
-      // ★ 新增：讀取儲存的名字
       const savedName = await AsyncStorage.getItem('user-name');
       if (savedName) setName(savedName);
     };
@@ -40,10 +38,9 @@ export default function AccountSettingsScreen() {
     }
   };
 
-  // ★ 新增：按下完成時，先存名字再返回
   const handleSaveAndGoBack = async () => {
-    await AsyncStorage.setItem('user-name', name); // 把名字存進記憶體
-    router.back(); // 返回上一頁
+    await AsyncStorage.setItem('user-name', name); 
+    router.back(); 
   };
 
   return (
@@ -76,13 +73,12 @@ export default function AccountSettingsScreen() {
             <TextInput 
               style={styles.input}
               value={name}
-              onChangeText={setName} // 使用者打字時更新 name 狀態
+              onChangeText={setName} 
             />
           </View>
         </View>
 
         <View style={styles.footer}>
-          {/* ★ 修改：按下完成按鈕觸發儲存 */}
           <TouchableOpacity style={styles.doneButton} onPress={handleSaveAndGoBack}>
             <Text style={styles.doneButtonText}>完成</Text>
           </TouchableOpacity>
