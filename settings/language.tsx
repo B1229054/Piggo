@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFF',
     borderWidth: 1,
-    borderColor: '#007AFF', // 藍色邊框
+    borderColor: '#007AFF', 
     borderRadius: 10,
     paddingHorizontal: 10,
     height: 40,
