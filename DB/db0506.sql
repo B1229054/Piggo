@@ -138,6 +138,7 @@ CREATE TABLE trip_photos (
     trip_id INT,
     user_id INT,
     image_url VARCHAR(255),
+    is_shared BOOLEAN DEFAULT TRUE,
     taken_at DATETIME,
     lat DECIMAL(10, 8),
     lng DECIMAL(10, 8),
