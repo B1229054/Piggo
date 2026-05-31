@@ -61,24 +61,42 @@ AI 降維與結構化處理：系統透過呼叫後端 AI API，將外部社群�
 
 #  📂 專案結構
 Plaintext
-PIGGO/
-├── android/                   # Android 原生設定檔
-├── ios/                       # iOS 原生設定檔
-├── lib/                       # Flutter 主要程式碼目錄
-│   ├── main.dart              # 程式進入點與 Provider 全域宣告
-│   ├── models/                # 資料模型 (User, Plan, Vote, Post)
-│   ├── providers/             # 狀態管理邏輯 (Auth, PlanProvider, AIProvider)
-│   ├── screens/               # 各大分頁 UI 畫面
-│   │   ├── onboarding/        # 登入與旅行人格測驗
-│   │   ├── plan/              # 行程計畫與聊天室投票
-│   │   ├── home/              # 首頁儀表板與導航
-│   │   ├── camera/            # 智慧相機
-│   │   ├── profile/           # 個人社群頁面
-│   │   └── community/         # 推薦版與交流版
-│   ├── services/              # 外部 API 與 Firebase 服務操作層
-│   └── widgets/               # 共用 UI 元件 (Buttons, Cards, Dialogs)
-├── assets/                    # 靜態圖片與 Icon 資源
-├── pubspec.yaml               # 專案依賴套件設定檔
+PIGGO/  
+
+├── android/                   # Android 原生設定檔  
+
+├── ios/                       # iOS 原生設定檔  
+
+├── lib/                       # Flutter 主要程式碼目錄  
+
+│   ├── main.dart              # 程式進入點與 Provider 全域宣告  
+
+│   ├── models/                # 資料模型 (User, Plan, Vote, Post)  
+
+│   ├── providers/             # 狀態管理邏輯 (Auth, PlanProvider, AIProvider)  
+
+│   ├── screens/               # 各大分頁 UI 畫面  
+
+│   │   ├── onboarding/        # 登入與旅行人格測驗  
+
+│   │   ├── plan/              # 行程計畫與聊天室投票  
+
+│   │   ├── home/              # 首頁儀表板與導航  
+
+│   │   ├── camera/            # 智慧相機  
+
+│   │   ├── profile/           # 個人社群頁面  
+
+│   │   └── community/         # 推薦版與交流版  
+
+│   ├── services/              # 外部 API 與 Firebase 服務操作層  
+
+│   └── widgets/               # 共用 UI 元件 (Buttons, Cards, Dialogs)  
+
+├── assets/                    # 靜態圖片與 Icon 資源  
+
+├── pubspec.yaml               # 專案依賴套件設定檔  
+
 └── README.md                  # 專案說明文件
 #  👥 開發團隊
 專案開發成員 — B1229001 張詠淇 B1229005 王奕喬 B1229007 高思婕 B1229054 潘欣妤
