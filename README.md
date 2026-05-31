@@ -27,13 +27,19 @@ Dart SDK: 3.3.0 或以上版本
 
 Android Studio / VS Code
 
-套件名稱	版本	應用說明
-provider	^6.1.1	全域狀態管理與跨畫面資料同步
-firebase_core	^2.27.0	Firebase 核心服務初始化
-cloud_firestore	^4.15.8	NoSQL 雲端資料庫，處理行程與貼文
-firebase_auth	^4.17.8	使用者註冊、登入與身分驗證
-google_maps_flutter	^2.5.3	首頁導航與群組成員定位地圖
-http	^1.2.0	串接外部 AI API 與天氣/交通資訊
+套件名稱	            版本	   應用說明
+provider	          6.1.1 	 全域狀態管理與跨畫面資料同步  
+
+firebase_core	      2.27.0	 Firebase 核心服務初始化  
+
+cloud_firestore	    4.15.8	 NoSQL 雲端資料庫，處理行程與貼文  
+
+firebase_auth	      4.17.8	 使用者註冊、登入與身分驗證  
+
+google_maps_flutter	2.5.3	   首頁導航與群組成員定位地圖  
+
+http	              1.2.0	   串接外部 AI API 與天氣/交通資訊  
+
 #  🚀 系統使用指南
 初始化與測驗：首次開啟 APP 完成註冊後，系統會自動引導進入「旅行人格測驗」，請依直覺作答以利 AI 建立初始偏好模型。
 
