@@ -27,7 +27,8 @@ Dart SDK: 3.3.0 或以上版本
 
 Android Studio / VS Code
 
-套件名稱	            版本	   應用說明
+套件名稱	            版本	   應用說明  
+
 provider	          6.1.1 	 全域狀態管理與跨畫面資料同步  
 
 firebase_core	      2.27.0	 Firebase 核心服務初始化  
