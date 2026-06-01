@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// 外層：改成 StatefulWidget 來控制一進畫面的自動滑動
+// 外層用StatefulWidget來控制一進畫面的自動滑動
 class PostDetailScreen extends StatefulWidget {
   final List<dynamic> posts;
   final int initialIndex;
@@ -23,7 +23,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
     // 幫每一篇貼文準備一個「定位鑰匙」
     _keys = List.generate(widget.posts.length, (index) => GlobalKey());
     
-    // 等待畫面剛畫好的瞬間，自動順滑地滾動到你點擊的那篇貼文
+    // 等待畫面剛畫好的瞬間，自動順滑地滾動到點擊的那篇貼文
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_keys[widget.initialIndex].currentContext != null) {
         Scrollable.ensureVisible(
@@ -40,7 +40,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // 只有最外層有一個固定的 AppBar，不會跟著貼文滑動
+      // 最外層有一個固定的AppBar，不會跟著貼文滑動
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -51,7 +51,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
         title: const Text('貼文', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         centerTitle: true,
       ),
-      // 使用 ListView 取代 PageView，達成 IG 般順順滑動的效果
+      // 使用ListView取代PageView，達成順順滑動的效果
       body: ListView(
         children: widget.posts.asMap().entries.map((entry) {
           return Container(
@@ -59,7 +59,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
             child: Column(
               children: [
                 PostItemWidget(post: entry.value),
-                // 貼文跟貼文之間的分隔線 (淡淡的灰色區塊，像 IG 一樣)
+                // 貼文跟貼文之間的分隔線 (淡淡的灰色區塊)
                 Divider(height: 20, thickness: 8, color: Colors.grey[100]), 
               ],
             ),
@@ -259,18 +259,18 @@ class _PostItemWidgetState extends State<PostItemWidget> {
     final List<dynamic> imageUrls = widget.post['imageUrls'] ?? 
         (widget.post['imageUrl'] != null ? [widget.post['imageUrl']] : []);
 
-    // 內層不再使用 Scaffold，直接回傳 Column 組合內容
+    // 內層不再使用Scaffold，直接回傳Column組合內容
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 1. 地點列 + 移到最右邊的三個點點選單
+        // 地點列 + 移到最右邊的三個點點選單
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
           child: Row(
             children: [
               Icon(Icons.location_on, color: Colors.grey[700], size: 20),
               const SizedBox(width: 5),
-              // 使用 Expanded 把地點文字撐開，把點點選單擠到畫面最右邊！
+              // 使用Expanded把地點文字撐開，把點點選單放到畫面最右邊
               Expanded(
                 child: Text(location, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
               ),
@@ -289,14 +289,14 @@ class _PostItemWidgetState extends State<PostItemWidget> {
           ),
         ),
         
-        // 2. Hashtags
+        // Hashtags
         if (hashtags.isNotEmpty)
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, bottom: 10),
             child: Text(hashtags.join('  '), style: const TextStyle(color: Colors.black87, fontSize: 13)),
           ),
         
-        // 3. 圖片區塊
+        // 圖片區塊
         Stack(
           alignment: Alignment.bottomRight,
           children: [
@@ -310,13 +310,13 @@ class _PostItemWidgetState extends State<PostItemWidget> {
                   
                   // 判斷圖片路徑的來源，決定使用哪種方式載入
                   if (imgPath.startsWith('http')) {
-                    // 1. 如果是 http 開頭，載入網路圖片 (未來接上資料庫會用到)
+                    // 1. 如果是http開頭，載入網路圖片 (未來接上資料庫時)
                     return Image.network(imgPath, fit: BoxFit.cover);
                   } else if (imgPath.startsWith('assets/')) {
-                    // 2. 如果是 assets 開頭，載入 APP 內建圖片
+                    // 2. 如果是assets開頭，載入APP內建圖片
                     return Image.asset(imgPath, fit: BoxFit.cover);
                   } else {
-                    // 3. 其他狀況，載入本機手機裡的檔案 (你自己剛發佈的貼文)
+                    // 3. 其他狀況，載入本機手機裡的檔案 (剛發佈的貼文)
                     return Image.file(File(imgPath), fit: BoxFit.cover);
                   }
                 },
