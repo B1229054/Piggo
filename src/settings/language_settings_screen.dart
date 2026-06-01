@@ -10,7 +10,7 @@ class LanguageSettingsScreen extends StatefulWidget {
 class _LanguageSettingsScreenState extends State<LanguageSettingsScreen> {
   final TextEditingController _searchController = TextEditingController();
   
-  // 模擬原本的 LANGUAGES 資料
+  // 模擬LANGUAGES資料
   final List<Map<String, String>> _languages = [
     {'id': 'en', 'name': 'English', 'sub': '英文'},
     {'id': 'zh-tw', 'name': '中文(繁體)', 'sub': '繁體中文'},
@@ -53,7 +53,7 @@ class _LanguageSettingsScreenState extends State<LanguageSettingsScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            // 搜尋框 (對應原本的 searchContainer)
+            // 搜尋框
             Container(
               margin: const EdgeInsets.only(top: 10),
               height: 45,
@@ -85,7 +85,7 @@ class _LanguageSettingsScreenState extends State<LanguageSettingsScreen> {
 
             const SizedBox(height: 20),
 
-            // 語言列表 (對應原本的 FlatList)
+            // 語言列表
             Expanded(
               child: ListView.builder(
                 itemCount: _filteredLanguages.length,
@@ -107,7 +107,7 @@ class _LanguageSettingsScreenState extends State<LanguageSettingsScreen> {
                           // 處理切換語言邏輯
                         },
                       ),
-                      // 模擬原本無底線或自定義底線的效果
+                      // 模擬無底線或自定義底線的效果
                     ],
                   );
                 },
