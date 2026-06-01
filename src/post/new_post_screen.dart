@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:image_cropper/image_cropper.dart'; // 👉 引入裁切套件
+import 'package:image_cropper/image_cropper.dart'; // 引入裁切套件
 import 'package:shared_preferences/shared_preferences.dart';
 import 'location_search_screen.dart'; 
 
@@ -27,11 +27,10 @@ class _NewPostScreenState extends State<NewPostScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _pickImages());
   }
 
-  // 👉 1. 新增：裁切圖片的功能
+  // 裁切圖片的功能
   Future<void> _cropImage(int index) async {
     CroppedFile? croppedFile = await ImageCropper().cropImage(
       sourcePath: _images[index],
-      // ❌ 注意：這裡外層的 aspectRatioPresets 已經被移除了
       uiSettings: [
         AndroidUiSettings(
           toolbarTitle: '編輯照片',
@@ -40,7 +39,6 @@ class _NewPostScreenState extends State<NewPostScreen> {
           initAspectRatio: CropAspectRatioPreset.square,
           lockAspectRatio: false,
           hideBottomControls: false, // 顯示旋轉、比例縮放的控制列
-          // ✅ 移到 Android 的設定裡面
           aspectRatioPresets: [
             CropAspectRatioPreset.square,
             CropAspectRatioPreset.ratio3x2,
@@ -51,7 +49,6 @@ class _NewPostScreenState extends State<NewPostScreen> {
         ),
         IOSUiSettings(
           title: '編輯照片',
-          // ✅ 也加進 iOS 的設定裡面
           aspectRatioPresets: [
             CropAspectRatioPreset.square,
             CropAspectRatioPreset.ratio3x2,
@@ -63,7 +60,7 @@ class _NewPostScreenState extends State<NewPostScreen> {
       ],
     );
 
-    // 如果使用者有完成裁切，就把舊圖片替換成裁切後的新圖片
+    // 如果完成裁切，就把舊圖片替換成裁切後的新圖片
     if (croppedFile != null) {
       setState(() {
         _images[index] = croppedFile.path;
@@ -85,7 +82,7 @@ class _NewPostScreenState extends State<NewPostScreen> {
     }
   }
 
-  // 處理 Hashtag
+  // 處理Hashtag
   void _onHashtagChanged(String text) {
     if (text.endsWith(' ')) {
       String cleanText = text.trim();
@@ -233,7 +230,7 @@ class _NewPostScreenState extends State<NewPostScreen> {
             ),
           ),
         ),
-        // 👉 編輯/裁切按鈕 (左上角)
+        // 編輯/裁切按鈕 (左上角)
         Positioned(
           left: 5, top: 8,
           child: GestureDetector(
