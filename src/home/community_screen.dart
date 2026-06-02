@@ -77,7 +77,7 @@ class _CommunityScreenState extends State<CommunityScreen> with SingleTickerProv
           ExchangeTab(),
         ],
       ),
-      // AI 小豬懸浮按鈕
+      // AI小豬懸浮按鈕
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color(0xFF6CA6CC),
@@ -88,7 +88,6 @@ class _CommunityScreenState extends State<CommunityScreen> with SingleTickerProv
   }
 }
 
-// ==================== 推薦版 (使用 PostItemWidget) ====================
 // ==================== 推薦版 (使用 PostItemWidget) ====================
 class RecommendationTab extends StatelessWidget {
   const RecommendationTab({super.key});
@@ -120,9 +119,7 @@ class RecommendationTab extends StatelessWidget {
 
     return ListView(
       children: [
-        // ❌ AI 建議氣泡已經移除
-
-        // 推薦貼文列表 (最上方加一點留白會比較好看)
+        // 推薦貼文列表
         const SizedBox(height: 10),
         ...recommendedPosts.map((data) => Column(
           children: [
@@ -171,7 +168,7 @@ class ExchangeTab extends StatelessWidget {
   }
 }
 
-// ==================== 交流版 單篇貼文元件 (列表用) ====================
+// ==================== 交流版 單篇貼文元件(列表用)====================
 class ExchangePostItem extends StatefulWidget {
   final String author;
   final String title;
@@ -219,7 +216,7 @@ class _ExchangePostItemState extends State<ExchangePostItem> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // 👉 點擊這則貼文時，跳轉到詳細頁面！
+      // 貼文時，跳轉到詳細頁面
       onTap: () {
         Navigator.push(
           context,
@@ -267,8 +264,6 @@ class _ExchangePostItemState extends State<ExchangePostItem> {
             // 內文
             Text(widget.content, style: const TextStyle(fontSize: 15, height: 1.4)),
             const SizedBox(height: 12),
-            
-            // ❌ 這裡的 AI 摘要被拿掉了，只會在詳細頁顯示
               
             // 底部互動區 
             Row(
@@ -337,7 +332,7 @@ class ExchangePostDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // 1. 貼文主體 (復用原本的排版，只是不能再點擊)
+            // 1. 貼文主體
             Container(
               padding: const EdgeInsets.all(16),
               color: Colors.white,
@@ -382,7 +377,7 @@ class ExchangePostDetailScreen extends StatelessWidget {
             // 貼文跟留言區之間的分隔底色
             const Divider(height: 1, thickness: 1, color: Color(0xFFEEEEEE)),
 
-            // 2. 排序與 AI 摘要區塊 (參考圖片3)
+            // 2. 排序與AI摘要區塊
             Container(
               color: const Color(0xFFF8F9FA),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -401,12 +396,12 @@ class ExchangePostDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   
-                  // AI 摘要
+                  // AI摘要
                   if (aiSummary != null)
                     Container(
                       padding: const EdgeInsets.all(16),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFEBF1F5), // 比主背景稍微深一點的藍灰
+                        color: const Color(0xFFEBF1F5), 
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Column(
@@ -446,7 +441,7 @@ class ExchangePostDetailScreen extends StatelessWidget {
     );
   }
 
-  // 單則留言的 UI
+  // 單則留言的UI
   Widget _buildReplyItem(Map<String, String> reply) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -458,7 +453,7 @@ class ExchangePostDetailScreen extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 18, backgroundColor: Colors.white,
-            child: Icon(Icons.pets, color: Colors.grey[800], size: 20), // 模擬動物頭像
+            child: Icon(Icons.pets, color: Colors.grey[800], size: 20), // 模擬頭貼
           ),
           const SizedBox(width: 12),
           Expanded(
