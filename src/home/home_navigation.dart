@@ -14,13 +14,12 @@ class HomeNavigation extends StatefulWidget {
 class _HomeNavigationState extends State<HomeNavigation> {
   int _selectedIndex = 0;
 
-  // 對應你原本的五個頁面
   final List<Widget> _pages = [
     const Center(child: Text('首頁 (開發中)')),
     const CommunityScreen(),
     const Center(child: Text('核心計畫頁 (開發中)')),
     const Center(child: Text('計畫表 (開發中)')),
-    const ProfileScreen(), // 這裡放你的個人主頁
+    const ProfileScreen(), 
   ];
 
   @override
@@ -31,7 +30,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
         children: _pages,
       ),
       bottomNavigationBar: Container(
-        height: 90, // 加高一點比較好按
+        height: 90, 
         decoration: const BoxDecoration(
           color: Color(0xFFF2F9FF),
           border: Border(top: BorderSide.none),
