@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:piggo/home/profile.dart';
 import 'package:piggo/home/community_screen.dart';
+import 'home_screen.dart';
 
 class HomeNavigation extends StatefulWidget {
   const HomeNavigation({super.key});
@@ -15,7 +16,7 @@ class _HomeNavigationState extends State<HomeNavigation> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text('首頁 (開發中)')),
+    const HomeScreen(),
     const CommunityScreen(),
     const Center(child: Text('核心計畫頁 (開發中)')),
     const Center(child: Text('計畫表 (開發中)')),
