@@ -5,6 +5,9 @@
 ![Database](https://img.shields.io/badge/Database-MySQL%20%7C%20Aiven-orange.svg)
 ![AWS S3](https://img.shields.io/badge/Storage-AWS%20S3-yellow.svg)
 
+團隊成員： 張詠淇、王奕喬、高思婕、潘欣妤
+指導教授： 張賢宗教授
+
 ## 前言
 要讓一群人順利出遊，從來不只是把行程安排好這麼簡單。從出發前的意見整合、旅途中的即時協助再到返程回憶分享，整個旅程都需要不斷溝通與協調。然而，現有 App 多半偏重行前規劃，且使用者需頻繁切換多個工具，導致操作流程零碎。
 
@@ -25,6 +28,9 @@
 |  系統介紹與展示  |  實境使用情境  |
 | :---: | :---: |
 | [![系統展示影片](https://img.youtube.com/vi/61y5aUJO-uw/hqdefault.jpg)](https://www.youtube.com/watch?v=61y5aUJO-uw) | [![情境影片](https://img.youtube.com/vi/dnWTcvT2FMo/hqdefault.jpg)](https://www.youtube.com/watch?v=dnWTcvT2FMo) |
+---
+## 系統架構圖
+<img src="https://github.com/user-attachments/assets/bd6d8750-81aa-44aa-8e78-ceca1e70e1d1" width="400">
 ---
 
 ##  創意描述與亮點
@@ -54,7 +60,7 @@
 
 ---
 
-## 🛠️ 開發工具與技術棧
+##  開發工具與技術
 
 ### 開發與運行環境
 * **IDE**: Visual Studio Code, Xcode, Android Studio
@@ -79,7 +85,6 @@
 3. **無縫決策與排程**：點擊 AI 卡片「加入投票選項」發起表決。確認的景點將自動同步並串接至團隊行程表。
 4. **行中儀表板**：旅遊當日切換至【首頁】，系統依行程表提供下一站導航、當下匯率、分帳工具，並透過 AI 推播天氣警告。
 
----
 ---
 
 ##  專案結構
