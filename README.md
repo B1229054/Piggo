@@ -30,7 +30,7 @@
 | [![系統展示影片](https://img.youtube.com/vi/61y5aUJO-uw/hqdefault.jpg)](https://www.youtube.com/watch?v=61y5aUJO-uw) | [![情境影片](https://img.youtube.com/vi/dnWTcvT2FMo/hqdefault.jpg)](https://www.youtube.com/watch?v=dnWTcvT2FMo) |
 ---
 ## 系統架構圖
-<img src="https://github.com/user-attachments/assets/bd6d8750-81aa-44aa-8e78-ceca1e70e1d1" width="600">
+<img src="https://github.com/user-attachments/assets/bd6d8750-81aa-44aa-8e78-ceca1e70e1d1" width="1000">
 
 ---
 
