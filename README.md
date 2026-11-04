@@ -1,8 +1,8 @@
 #  PIGGO：整合行程管理與社群分享的智慧旅遊應用系統
 ## 前言
 要讓一群人順利出遊，從來不只是把行程安排好這麼簡單。從出發前的意見整合、旅途中的即時協助再到返程回憶分享，整個旅程都需要不斷溝通與協調。然而，現有App多半偏重行前規劃，且使用者需頻繁切換多個工具，導致操作流程零碎。為此，我們開發PIGGO智慧旅遊App，以AI輔助與自動化協作為核心，完整涵蓋旅行「前、中、後」，自動化處理繁雜排程與事實查證，減輕旅伴負擔，讓多人出遊真正輕鬆順暢。
-## 海報
-<img src="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" width="200"> | <img src="https://via.placeholder.com/200x400.png?text=Plan+Screen" width="200"> | <img src="https://via.placeholder.com/200x400.png?text=AI+Quiz" width="200">
+## 專題海報
+| <img src="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" width="400"> | <img src="https://github.com/user-attachments/assets/17d0a251-992a-4336-9741-1ccfdbd50955" width="400"> |
 ## 創意描述
 ### 1. AI隨行協助：從動態排程到拍照指導
 * **演算法與推薦機制**：系統透過「旅行人格測驗」量化喜好標籤，並在後端進行邏輯運算與排序：綜合考量群組成員偏好的交集，同時串接Google Maps API計算景點間的距離與交通時間，由系統自動過濾並篩選出兼顧「大家喜好」與「路徑順暢」的推薦行程順序。
