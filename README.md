@@ -21,9 +21,10 @@
 ---
 ##  影音展示 
 >  *點擊下方縮圖即可前往 YouTube 觀看 PIGGO 的實機操作與完整使用情境。*
+
 |  系統介紹與展示  |  實境使用情境  |
 | :---: | :---: |
-| [![系統展示影片預留](https://img.youtube.com/vi/(https://youtu.be/61y5aUJO-uw)/hqdefault.jpg)](https://www.youtube.com/watch?v=https://youtu.be/61y5aUJO-uw) | [![情境影片](https://img.youtube.com/vi/dnWTcvT2FMo/hqdefault.jpg)](https://www.youtube.com/watch?v=dnWTcvT2FMo) |
+| [![系統展示影片](https://img.youtube.com/vi/61y5aUJO-uw/hqdefault.jpg)](https://www.youtube.com/watch?v=61y5aUJO-uw) | [![情境影片](https://img.youtube.com/vi/dnWTcvT2FMo/hqdefault.jpg)](https://www.youtube.com/watch?v=dnWTcvT2FMo) |
 ---
 
 ##  創意描述與亮點
