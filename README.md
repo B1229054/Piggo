@@ -20,15 +20,12 @@
 | <a href="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" target="_blank"><img src="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" width="400"></a> | <a href="https://github.com/user-attachments/assets/17d0a251-992a-4336-9741-1ccfdbd50955" target="_blank"><img src="https://github.com/user-attachments/assets/17d0a251-992a-4336-9741-1ccfdbd50955" width="400"></a> |
 
 ---
+## 🎥 影音展示 (Videos)
+> 💡 *點擊下方縮圖即可前往 YouTube 觀看 PIGGO 的實機操作與完整使用情境。*
 
-## 🎥 系統展示影片 (Demo Video)
-> 點擊下方縮圖即可前往 YouTube 觀看 PIGGO 系統實機操作展示。
-
-<!-- 請將下方的 VIDEO_ID 替換成你們 YouTube 影片網址 v= 後面的那串代碼 -->
-<!-- 例如網址是 https://www.youtube.com/watch?v=dQw4w9WgXcQ，那 VIDEO_ID 就是 dQw4w9WgXcQ -->
-
-[![PIGGO 系統展示影片](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-
+| 💻 系統介紹與展示 (System Demo) | 🎬 實境使用情境 (Scenario Video) |
+| :---: | :---: |
+| [![系統展示影片預留](https://img.youtube.com/vi/請在這裡替換你的介紹影片ID/hqdefault.jpg)](https://www.youtube.com/watch?v=請在這裡替換你的介紹影片ID) | [![情境影片](https://img.youtube.com/vi/dnWTcvT2FMo/hqdefault.jpg)](https://www.youtube.com/watch?v=dnWTcvT2FMo) |
 ---
 
 ## ✨ 創意描述與亮點 (Innovations)
