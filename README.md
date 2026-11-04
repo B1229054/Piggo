@@ -51,10 +51,10 @@
 ---
 ##  系統畫面展示
 
-| 交流版 | 首頁 | 計畫 | 
+| 交流版 | 首頁 | 計畫 | 拍照指導 |
 | :---: | :---: | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/6b692cbb-8ad5-4187-9f9a-6ab4c0ddad3e" width="200"> | <img src="https://github.com/user-attachments/assets/57723e08-0abd-4d14-b20e-4da087e33909" width="200"> | <img src="https://github.com/user-attachments/assets/41648154-8527-4c75-94a0-7574c967d835" width="200"> | <img src="https://github.com/user-attachments/assets/ae73a24c-3186-4ff9-aeaa-53068db9f95d" width="200"> |
-| **我的** | **推薦版** | **旅行人格測驗** |
+| **我的** | **推薦版** | **旅行人格測驗** | **AI深度指導** |
 | <img src="https://github.com/user-attachments/assets/1c1cf021-1f80-451a-b358-dbec8dfa89ce" width="200"> | <img src="https://github.com/user-attachments/assets/3d93d516-02dc-4ff5-93dc-702407b000af" width="200"> | <img src="https://github.com/user-attachments/assets/bd693907-50c0-42ea-addc-f4509b1fef99" width="200"> | <img src="https://github.com/user-attachments/assets/52c375d2-c57f-432a-985c-353c50449231" width="200"> |
 
 
