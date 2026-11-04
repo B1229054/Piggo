@@ -2,8 +2,7 @@
 
 ![Flutter](https://img.shields.io/badge/Flutter-Dart-blue.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green.svg)
-![Database](https://img.shields.io/badge/Database-MySQL%20%7C%20Aiven-orange.svg)
-![AWS S3](https://img.shields.io/badge/Storage-AWS%20S3-yellow.svg)
+![Database](https://img.shields.io/badge/Database-MySQL-orange.svg)
 
 團隊成員： 張詠淇、王奕喬、高思婕、潘欣妤
 指導教授： 張賢宗教授
@@ -75,7 +74,7 @@
 * **IDE**: Visual Studio Code, Xcode, Android Studio
 * **前端框架**: Flutter (Dart)
 * **後端框架**: Node.js (Express)
-* **資料庫與儲存**: MySQL, Aiven 雲端資料庫, AWS S3 雲端儲存
+* **資料庫與儲存**: 虛擬機 (整合 MySQL 關聯式資料庫與本地靜態照片儲存區)
 * **支援系統**: Android 7.0+ / iOS 13+
 
 ### 核心整合技術
@@ -104,7 +103,7 @@
 | **Plans (行程計畫)** | 儲存群組旅遊的總體計畫，關聯至所屬的 Users 群組。 |
 | **Votes (投票決策)** | 紀錄各行程地點的提案人、投票狀態與最終結果，採用即時狀態同步。 |
 | **Checklists (行李)** | 關聯至 Plans，儲存共編行李清單與認領狀態 (已準備 / 未準備)。 |
-| **Posts (社群貼文)** | 儲存我的/交流版的貼文內容，關聯至 AWS S3 中的圖片路徑。 |
+| **Posts (社群貼文)** | 儲存我的/交流版的貼文內容，關聯至虛擬機中的圖片路徑。 |
 
 *(註：刪除使用者或行程時，採用 Cascade Delete 確保底下的投票與貼文資料一併連動清除。)*
 
@@ -127,7 +126,7 @@
 本專案目前以畢業專題與學術展示為主，未來若需正式上線至雙平台 (App Store / Google Play)，需進一步優化以下項目：
 
 1. **Token 身分驗證機制**：目前 API 主要依賴基礎驗證，未來將全面導入 JWT (JSON Web Token) 確保每一次的 API 請求皆來自合法登入之使用者。
-2. **流量與檔案限制**：使用者上傳至 AWS S3 的圖片與相簿，尚未實作嚴格的檔案大小限制與圖片壓縮機制，未來將加入邊緣運算 (Edge) 壓縮以節省頻寬。
+2. **流量與檔案限制**：使用者上傳至虛擬機的圖片與相簿，尚未實作嚴格的檔案大小限制與圖片壓縮機制，未來將加入邊緣運算 (Edge) 壓縮以節省頻寬。
 3. **API 請求次數控管**：為避免惡意洗版或過度消耗外部 AI 與 Google Maps API 額度，未來將在 Node.js 後端加入請求速率限制。
 
 ---
