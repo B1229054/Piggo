@@ -52,10 +52,10 @@
 ---
 ##  系統畫面展示
 
-| 交流版 | 旅行人格測驗 | 旅遊計畫共編 |
+| 交流版 | 首頁 | 計畫 |
 | :---: | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/6b692cbb-8ad5-4187-9f9a-6ab4c0ddad3e" width="250"> | <img src="https://github.com/user-attachments/assets/57723e08-0abd-4d14-b20e-4da087e33909" width="250"> | <img src="https://github.com/user-attachments/assets/41648154-8527-4c75-94a0-7574c967d835" width="250"> |
-| **群組投票決策** | **推薦版** | **社群交流與貼文** |
+| **我的** | **推薦版** | **旅行人格測驗** |
 | <img src="https://github.com/user-attachments/assets/1c1cf021-1f80-451a-b358-dbec8dfa89ce" width="250"> | <img src="https://github.com/user-attachments/assets/3d93d516-02dc-4ff5-93dc-702407b000af" width="250"> | <img src="https://github.com/user-attachments/assets/bd693907-50c0-42ea-addc-f4509b1fef99" width="250"> |
 ---
 
