@@ -13,15 +13,13 @@
 ---
 
 ##  專題海報
->  *點擊圖片可查看原圖*
 
 | PIGGO 系統架構與特色 | PIGGO 核心功能展示 |
 | :---: | :---: |
 | <a href="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" target="_blank"><img src="https://github.com/user-attachments/assets/d3170f4d-b90e-4408-8656-f4264454039f" width="400"></a> | <a href="https://github.com/user-attachments/assets/17d0a251-992a-4336-9741-1ccfdbd50955" target="_blank"><img src="https://github.com/user-attachments/assets/17d0a251-992a-4336-9741-1ccfdbd50955" width="400"></a> |
 
 ---
-## 🎥 影音展示 (Videos)
->  *點擊下方縮圖即可前往 YouTube 觀看 PIGGO 的實機操作與完整使用情境。*
+## 🎥 影音展示 
 
 | 💻 系統介紹與展示 | 🎬 實境使用情境 |
 | :---: | :---: |
