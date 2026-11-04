@@ -81,7 +81,7 @@
 
 ---
 
-##  專案結構
+## 📁 專案結構 (Directory Structure)
 
 ```plaintext
 PIGGO/
@@ -103,7 +103,7 @@ PIGGO/
 ├── assets/             # 靜態圖片與 Icon 資源
 ├── pubspec.yaml        # 專案依賴套件設定檔
 └── README.md           # 專案說明文件
----
+
 ## 開發團隊
 專案開發成員 — B1229001 張詠淇 B1229005 王奕喬 B1229007 高思婕 B1229054 潘欣妤
 
